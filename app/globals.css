@@ -1,26 +1,17 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.keyboard {
+  @apply h-82 w-3xl rounded-[30px] bg-emerald-200 text-neutral-700 shadow-lg ring-[.2px] shadow-neutral-500/70;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.btn {
+  @apply cursor-pointer rounded-[6.5px] border-[1.4px] border-neutral-600/80 bg-gradient-to-b from-neutral-300/90 via-neutral-50 to-neutral-50 p-2 shadow-xs shadow-neutral-500/50 transition-transform duration-100 hover:scale-[0.99] hover:bg-gradient-to-br hover:shadow-none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.btn-arrow-up {
+  @apply cursor-pointer rounded-t-[6.5px] rounded-b-[3px] border-[1.32px] border-neutral-700 bg-gradient-to-b from-neutral-300 via-neutral-50 to-neutral-50 inset-shadow-sm inset-shadow-neutral-600/50 transition-transform duration-100 hover:scale-[0.98] hover:bg-gradient-to-br hover:shadow-none;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.btn-arrow-down {
+  @apply cursor-pointer rounded-t-[3px] rounded-b-[6.5px] border-[1.32px] border-neutral-700 bg-gradient-to-b from-neutral-300 via-neutral-50 to-neutral-50 inset-shadow-sm inset-shadow-neutral-600/50 transition-transform duration-100 hover:scale-[0.99] hover:bg-gradient-to-br hover:shadow-none;
 }
